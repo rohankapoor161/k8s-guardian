@@ -1,15 +1,5 @@
 package main
-
-import (
-	"fmt"
-	"os"
-
-	"github.com/rohankapoor/k8s-guardian/pkg/cmd"
-)
-
+import "fmt"
 func main() {
-	if err := cmd.Execute(); err != nil {
-		fmt.Fprintf(os.Stderr, "Error: %v\n", err)
-		os.Exit(1)
-	}
+    fmt.Println("Kubernetes Guardian")
 }

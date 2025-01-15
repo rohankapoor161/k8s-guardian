@@ -1,0 +1,3 @@
+gates:
+  resources:
+    require_limits: true

@@ -1,0 +1,13 @@
+gates:
+  resources:
+    require_limits: true
+    default_memory_limit: "1Gi"
+    default_cpu_limit: "1000m"
+  
+  health_checks:
+    require_readiness: false
+    require_liveness: false
+  
+  labels:
+    required:
+      - app.kubernetes.io/name

@@ -24,3 +24,7 @@ guardian validate -f deployment.yaml
 ## Status
 
 🚧 Work in progress - targeting v0.1.0
+
+## Contributing
+
+See [CONTRIBUTING.md](./CONTRIBUTING.md) for details on how to contribute.

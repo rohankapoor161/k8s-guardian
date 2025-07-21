@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: guardian-webhook
+  namespace: guardian-system
+  labels:
+    app: guardian
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: guardian
+  template:
+    metadata:
+      labels:
+        app: guardian
+    spec:
+      containers:
+      - name: webhook
+        image: rohankapoor161/k8s-guardian:latest
+        ports:
+        - name: webhook
+          containerPort: 8443
+        volumeMounts:
+        - name: certs
+          mountPath: /etc/webhook/certs
+          readOnly: true
+      volumes:
+      - name: certs
+        secret:
+          secretName: guardian-cert

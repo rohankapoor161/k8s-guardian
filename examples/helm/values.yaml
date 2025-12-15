@@ -1,0 +1,14 @@
+replicaCount: 2
+
+image:
+  repository: rohankapoor161/k8s-guardian
+  tag: latest
+  pullPolicy: IfNotPresent
+
+resources:
+  limits:
+    cpu: 500m
+    memory: 256Mi
+
+webhook:
+  port: 8443

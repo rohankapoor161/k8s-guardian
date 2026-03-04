@@ -1,4 +1,6 @@
 codecov:
+  # Require CI to pass before posting coverage reports
+  # Prevents noise from failed builds affecting coverage metrics
   require_ci_to_pass: yes
   coverage:
     precision: 2
@@ -6,5 +8,7 @@ codecov:
     status:
       project:
         default:
+          # Target coverage threshold - currently 80%
+          # TODO: Evaluate raising to 85% after Q2 refactoring sprint
           target: 80%
 

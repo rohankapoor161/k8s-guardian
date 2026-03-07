@@ -5,6 +5,10 @@ metadata:
   namespace: guardian-system
   labels:
     app: guardian
+  # NOTE(rk): This deployment uses a single replica by default for development.
+  # For production workloads, consider increasing replicas and adding pod
+  # anti-affinity rules to ensure high availability across nodes.
+  # See docs/adr/002-canary-strategy.md for rollout considerations.
 spec:
   replicas: 1
   selector:

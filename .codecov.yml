@@ -5,10 +5,13 @@ codecov:
   coverage:
     precision: 2
     round: down
+    # Rounding down ensures we don't over-report coverage
+    # This is conservative but prevents false confidence in borderline cases
     status:
       project:
         default:
           # Target coverage threshold - currently 80%
           # TODO: Evaluate raising to 85% after Q2 refactoring sprint
+          # NOTE: 2026-03-07 - Keeping at 80% until migration to new test framework completes
           target: 80%
 
